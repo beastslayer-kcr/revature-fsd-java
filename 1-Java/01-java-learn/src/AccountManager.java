@@ -11,13 +11,13 @@ public class AccountManager {
 		balance = calculateBalanceAndPrint('W', 10000.0, balance);
 		
 		
-/*		System.out.println("Account Statement of " + accountNumber);
+		System.out.println("Account Statement of " + accountNumber);
 		System.out.println("Initial Balance: " + balance);
 		
 		System.out.println("\n----------------------------");
 		System.out.println("Type Transaction Balance");
 		System.out.println("------------------------------");
-		char type = 'W';
+/*		char type = 'W';
 		double transaction = 2000.0;
 		balance -= transaction;
 		System.out.printf("   %c %12.2f %8.2f\n", type, transaction, balance);

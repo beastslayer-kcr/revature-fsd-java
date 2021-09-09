@@ -11,12 +11,12 @@ public class ProfitCalculatorClass {
 		
 		scanner.close();
 		int profit = 0;
-		profit  =(int)Profit(buyingPrice,sellingPrice);
+		profit  = Profit(buyingPrice,sellingPrice);
 		
 		System.out.println("profit = " + profit);
 
 	}
-	public static double Profit(int buyingPrice, int sellingPrice) {
+	public static int Profit(int buyingPrice, int sellingPrice) {
 		int profit = sellingPrice - buyingPrice;
 		return profit;
 	}

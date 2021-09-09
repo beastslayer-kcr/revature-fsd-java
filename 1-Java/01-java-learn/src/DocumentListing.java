@@ -5,7 +5,7 @@ public class DocumentListing {
 		String[] documents = {"Driving License", "Passport", "Last 3 months Bank Statement",
 		                    "Salary Slips of last 3 months", "2 Passport Size Photographs"};
 		                    		
-		for(int i=1; i<6; i++) {
+		for(int i = 1; i <= documents.length; i++) {
 			System.out.println(i+")   " + documents[i-1]);
 			
 		}		
