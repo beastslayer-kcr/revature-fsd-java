@@ -1,6 +1,5 @@
 package com.revature.bankapp.form;
 
-
 import java.util.Scanner;
 
 import com.revature.bankapp.menu.CustomerMainMenu;
@@ -10,21 +9,21 @@ import com.revature.bankapp.model.DataManager;
 public class LoginForm extends Form {
 	private String email;
 	private String password;
-	
-	public  LoginForm(String name) {
+
+	public LoginForm(String name) {
 		super(name);
 	}
-	
+
 	@Override
 	public void captureData() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Email: ");
 		email = scanner.nextLine();
-		
+
 		System.out.print("Password: ");
 		password = scanner.nextLine();
 	}
-	
+
 	@Override
 	public void action() {
 		Customer customer = DataManager.getCustomerByEmail(email);
@@ -40,6 +39,5 @@ public class LoginForm extends Form {
 			System.out.println("Invalid email / password");
 		}
 	}
-	
 
 }

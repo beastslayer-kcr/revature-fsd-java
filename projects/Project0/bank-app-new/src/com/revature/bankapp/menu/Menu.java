@@ -9,11 +9,11 @@ public abstract class Menu {
 	protected String name;
 	protected List<String> menuItems;
 	protected int selection;
-	
+
 	public Menu(String name) {
 		this.name = name;
 		menuItems = new ArrayList<>();
-		//this.selection = selection;
+		// this.selection = selection;
 	}
 
 	public void addMenuItem(String menuItemName) {
@@ -34,13 +34,14 @@ public abstract class Menu {
 	public void captureSelection() {
 		Scanner scanner = new Scanner(System.in);
 		selection = Integer.parseInt(scanner.nextLine());
-		
+
 	}
-	
+
 	public void displayMenuAndCaptureSelection() {
 		displayMenu();
 		captureSelection();
 		handleAction();
 	}
+
 	abstract void handleAction();
 }
