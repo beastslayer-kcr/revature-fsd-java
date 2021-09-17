@@ -7,17 +7,31 @@ public class Customer {
 	private String email;
 	private String password;
 
-	private static long counter = 0;
+	
+	//@@@
+	private static Account currentAccount;
 
+	public static Account getCurrentAccount() {
+		return currentAccount;
+	}
+
+	public static void setCurrentAccount(Account currentAccount) {
+		Customer.currentAccount = currentAccount;
+	}
+	
+	
 	public Customer(String firstName, String lastName, String email, String password) {
 		super();
-		counter++;
-		this.id = counter;
+	
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
-
+	}
+	
+	
+	public Customer() {
+		
 	}
 
 	public long getId() {
@@ -39,5 +53,27 @@ public class Customer {
 	public String getPassword() {
 		return password;
 	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	
 
 }

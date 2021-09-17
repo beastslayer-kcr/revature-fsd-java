@@ -1,11 +1,11 @@
 package com.revature.bankapp.menu;
 
-import java.util.Scanner;
 
+import java.util.Scanner;
 import com.revature.bankapp.form.CustomerRegistrationForm;
 import com.revature.bankapp.form.LoginForm;
 import com.revature.bankapp.model.Customer;
-import com.revature.bankapp.model.DataManager;
+//import com.revature.bankapp.model.DataManager;
 
 public class MainMenu extends Menu {
 
@@ -36,6 +36,11 @@ public class MainMenu extends Menu {
 
 			LoginForm loginForm = new LoginForm("Login Form");
 			loginForm.captureDataAndPerformAction();
+			displayMenuAndCaptureSelection();
+			break;
+		
+		case 3 : 
+			System.out.println("owenfiuwnfdo2nef");
 			break;
 		}
 	}

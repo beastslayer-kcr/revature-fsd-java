@@ -3,32 +3,100 @@ package com.revature.bankapp.model;
 public class Account {
 
 	private String branch;
-	private Double balance;
+	private long balance;
+	private String first_name;
+	private String last_name;
+	private long account_num;
+	
 
-	public Account(String banch, Double balance) {
+	
+
+	public Account(String branch, long balance, String first_name, String last_name) {
 		super();
-		this.branch = banch;
+		this.branch = branch;
 		this.balance = balance;
+		this.first_name = first_name;
+		this.last_name = last_name;
 	}
 
-	public String getBanch() {
+	public Account() {
+		
+	}
+
+
+	public String getBranch() {
 		return branch;
 	}
 
-	public void setBanch(String banch) {
+
+
+
+	public void setBranch(String branch) {
 		this.branch = branch;
 	}
 
-	public Double getBalance() {
+
+
+
+	public long getBalance() {
 		return balance;
 	}
 
-	public void setBalance(Double balance) {
+
+
+
+	public void setBalance(long balance) {
 		this.balance = balance;
+	}
+
+
+
+
+	public String getFirst_name() {
+		return first_name;
+	}
+
+
+
+
+	public void setFirst_name(String first_name) {
+		this.first_name = first_name;
+	}
+
+
+
+
+	public String getLast_name() {
+		return last_name;
+	}
+
+
+
+
+	public void setLast_name(String last_name) {
+		this.last_name = last_name;
+	}
+
+
+
+
+	public long getAccount_num() {
+		return account_num;
+	}
+
+
+
+
+	public void setAccount_num(long account_num) {
+		this.account_num = account_num;
 	}
 
 	@Override
 	public String toString() {
-		return "Account [banch=" + branch + ", balance=" + balance + "]";
+		return "Account [branch=" + branch + ", balance=" + balance + ", first_name=" + first_name + ", last_name="
+				+ last_name + ", account_num=" + account_num + "]";
 	}
+
+	
+	
 }

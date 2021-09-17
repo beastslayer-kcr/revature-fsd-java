@@ -5,7 +5,8 @@ import java.sql.SQLException;
 import com.revature.bankapp.model.Customer;
 
 public interface CustomerDao {
-	void creat (Customer customer) throws SQLException;
-	
+	void create(Customer customer) throws SQLException;
+
+	Customer getByEmail(String email) throws SQLException;
 	
 }

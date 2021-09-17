@@ -1,6 +1,6 @@
 package com.revature.bankapp.form;
 
-import java.sql.SQLException;
+import java.sql.SQLException; 
 import java.util.Scanner;
 
 import com.revature.bankapp.costumerImpl.CustomerDaoImpl;
@@ -34,7 +34,7 @@ public class CustomerRegistrationForm extends Form {
 	//	DataManager.addCustomer(new Customer(firstName, lastName, email, password));
 		CustomerDaoImpl customerdao = new CustomerDaoImpl();
 		try {
-			customerdao.creat(new Customer (firstName , lastName , email , password ));
+			customerdao.create(new Customer (firstName , lastName , email , password ));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

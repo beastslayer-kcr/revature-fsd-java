@@ -6,7 +6,7 @@ public class AccountRegistrationForm extends Form {
 
 	public AccountRegistrationForm(String name) {
 		super(name);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Override
