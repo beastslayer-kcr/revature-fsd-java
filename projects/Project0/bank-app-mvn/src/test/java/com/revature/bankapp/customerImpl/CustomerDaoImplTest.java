@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 import org.junit.jupiter.api.Test;
 
+import com.revature.bankapp.costumerImpl.AccountDaoImpl;
 import com.revature.bankapp.costumerImpl.CustomerDaoImpl;
 import com.revature.bankapp.model.Account;
 import com.revature.bankapp.model.Customer;
@@ -38,14 +39,16 @@ class CustomerDaoImplTest {
 
 	@Test
 	void test1() {
-		CustomerDaoImpl customerDaoImpl = new CustomerDaoImpl();
+		AccountDaoImpl accountDaoImpl = new AccountDaoImpl();
 		Account account = new Account();
+		account.setAccount_num(4);
 		account.setBalance(6000.00);
 		account.setFirst_name("Chandra");
 		account.setLast_name("xyz");
 		account.setBranch("Gurgoan");
+		account.setEmail("gfgf");
 		try {
-			customerDaoImpl.create(account);
+			accountDaoImpl.create(account);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

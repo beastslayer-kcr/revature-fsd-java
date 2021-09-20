@@ -3,6 +3,7 @@ package com.revature.bankapp.menu;
 
 import java.util.Scanner;
 import com.revature.bankapp.form.CustomerRegistrationForm;
+import com.revature.bankapp.form.EmployeeLogin;
 import com.revature.bankapp.form.LoginForm;
 import com.revature.bankapp.model.Customer;
 //import com.revature.bankapp.model.DataManager;
@@ -39,8 +40,14 @@ public class MainMenu extends Menu {
 			displayMenuAndCaptureSelection();
 			break;
 		
-		case 3 : 
-			System.out.println("owenfiuwnfdo2nef");
+		case 3:
+			EmployeeLogin empLogin = new EmployeeLogin("Admin Login");
+			empLogin.captureDataAndPerformAction();
+			displayMenuAndCaptureSelection();
+			break;
+		
+		case 4:
+			System.out.println("@@@@SAB KHATAM @@@");
 			break;
 		}
 	}

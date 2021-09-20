@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import com.revature.bankapp.main.BankApp;
+
 public abstract class Menu {
 
 	protected String name;
@@ -32,8 +34,8 @@ public abstract class Menu {
 	}
 
 	public void captureSelection() {
-		Scanner scanner = new Scanner(System.in);
-		selection = Integer.parseInt(scanner.nextLine());
+		Scanner scanner = BankApp.getScanner();
+		selection = Integer.parseInt(scanner.next());
 
 	}
 

@@ -11,7 +11,7 @@ import com.revature.bankapp.util.AccountDao;
 import com.revature.bankapp.util.CustomerDao;
 import com.revature.bankapp.util.Util;
 
-public class CustomerDaoImpl implements CustomerDao, AccountDao{
+public class CustomerDaoImpl implements CustomerDao{
 
 	@Override
 	public void create(Customer customer) throws SQLException {
@@ -46,23 +46,13 @@ public class CustomerDaoImpl implements CustomerDao, AccountDao{
 				return customer;
 			}
 		}
+		
 		return null;
 
 	}
 
-	@Override
-	public void create(Account account) throws SQLException {
-		try (Connection connection = Util.getConnection()) {
-			String sql = "INSERT INTO account (balance, first_name, last_name,branch) VALUES (?,?,?,?)";
-			PreparedStatement preparedStatement = connection.prepareStatement(sql);
-			//preparedStatement.setInt(1, account.(int)getBalance());
-			preparedStatement.setString(2, account.getFirst_name());
-			preparedStatement.setString(3, account.getLast_name());
-			preparedStatement.setString(4, account.getBranch());
-			preparedStatement.executeUpdate();
-
-		}
+	
 		
 	}
 
-}
+

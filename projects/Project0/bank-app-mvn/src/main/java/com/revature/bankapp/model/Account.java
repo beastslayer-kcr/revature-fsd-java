@@ -3,26 +3,35 @@ package com.revature.bankapp.model;
 public class Account {
 
 	private String branch;
-	private long balance;
+	private double balance;
 	private String first_name;
 	private String last_name;
 	private long account_num;
-	
+	private String email;
 
 	
 
-	public Account(String branch, long balance, String first_name, String last_name) {
+	public Account(double balance, String branch,  String first_name, String last_name, String email) {
 		super();
 		this.branch = branch;
 		this.balance = balance;
 		this.first_name = first_name;
 		this.last_name = last_name;
+		this.email = email;
 	}
 
 	public Account() {
 		
 	}
 
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 	public String getBranch() {
 		return branch;
@@ -38,14 +47,14 @@ public class Account {
 
 
 
-	public long getBalance() {
+	public Double getBalance() {
 		return balance;
 	}
 
 
 
 
-	public void setBalance(long balance) {
+	public void setBalance(double balance) {
 		this.balance = balance;
 	}
 

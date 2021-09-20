@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 import com.revature.bankapp.costumerImpl.CustomerDaoImpl;
+import com.revature.bankapp.main.BankApp;
 import com.revature.bankapp.menu.CustomerMainMenu;
 import com.revature.bankapp.model.Customer;
 import com.revature.bankapp.model.DataManager;
@@ -43,6 +44,7 @@ public class LoginForm extends Form {
 			System.out.println("Invalid email User_id / password");
 		} else if (customer.getPassword().equals(password)) {
 			success = true;
+			BankApp.setCurrentCustomer(customer);
 			System.out.println("Login Successful.");
 			CustomerMainMenu menu = new CustomerMainMenu("Customer Main Menu");
 			menu.displayMenuAndCaptureSelection();
