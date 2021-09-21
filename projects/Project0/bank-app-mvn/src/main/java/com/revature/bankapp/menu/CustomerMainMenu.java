@@ -15,8 +15,10 @@ public class CustomerMainMenu extends Menu {
 		super(name);
 		addMenuItem("Create new account");
 		addMenuItem("View Accounts");
+		addMenuItem("Transaction");
+		
 		addMenuItem("Logout");
-
+		
 		displayMenuAndCaptureSelection();
 	}
 
@@ -42,6 +44,13 @@ public class CustomerMainMenu extends Menu {
 			displayMenuAndCaptureSelection();
 			break;
 		case 3:
+			TransactionMenu tMenu = new TransactionMenu("Transaction Menu");
+			tMenu.getAccount();
+			tMenu.displayMenuAndCaptureSelection();
+		
+			
+			
+		case 4:
 			System.out.println("You have loged out Sucessfully");
 			break;
 		}

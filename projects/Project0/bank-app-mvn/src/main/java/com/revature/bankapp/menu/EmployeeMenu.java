@@ -9,6 +9,7 @@ import com.revature.bankapp.form.CustomerRegistrationForm;
 import com.revature.bankapp.form.LoginForm;
 import com.revature.bankapp.model.Account;
 import com.revature.bankapp.model.Customer;
+import com.revature.bankapp.model.Transaction;
 import com.revature.bankapp.util.EmployeeDao;
 
 public class EmployeeMenu extends Menu{
@@ -19,6 +20,7 @@ public class EmployeeMenu extends Menu{
 		addMenuItem("Display All Customers");
 		addMenuItem("Display All Accounts");
 		addMenuItem("Display Transactions");
+		
 		addMenuItem("Logout");
 	}
 
@@ -59,6 +61,15 @@ public class EmployeeMenu extends Menu{
 			}
 			displayMenuAndCaptureSelection();
 			break;
+		case 4:
+			try {
+				ArrayList<Transaction> trans = (ArrayList<Transaction>) edao.viewTransaction();
+				trans.forEach(System.out::println);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			displayMenuAndCaptureSelection();
 		case 5:
 			MainMenu mainmenu = new MainMenu("Main Menu");
 			mainmenu.displayMenu();

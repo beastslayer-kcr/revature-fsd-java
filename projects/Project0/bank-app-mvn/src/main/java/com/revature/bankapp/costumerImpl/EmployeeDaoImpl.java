@@ -79,26 +79,23 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	}
 
 	@Override
+	
 	public List<Transaction> viewTransaction() throws SQLException {
 		List<Transaction> transactionList = new ArrayList<>();
 		try (Connection connection = Util.getConnection()) {
-			String sql = "select c.id, c.name, a.account_number, a.initial_amount, t.type, t.amount from transaction t\r\n" + 
-					"inner join account a on account_id = a.id\r\n" + 
-					"inner join customer c on customer_id = c.id";
+			String sql = "select * from transaction";
 			PreparedStatement statement = connection.prepareStatement(sql);
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				Transaction transactionTemp = new Transaction();
-				transactionTemp.setCustomerId(resultSet.getInt("id"));
-				transactionTemp.setName(resultSet.getString("name"));
-				transactionTemp.setAccountNumber(resultSet.getString("account_number"));
-				transactionTemp.setInitialAmount(resultSet.getDouble("initial_amount"));
 				transactionTemp.setType(resultSet.getString("type").charAt(0));
 				transactionTemp.setAmount(resultSet.getDouble("amount"));
+				transactionTemp.setAccountId(resultSet.getInt("account_id"));
 				transactionList.add(transactionTemp);
 
 			}
 		}
 		return transactionList;
 	}
+
 }

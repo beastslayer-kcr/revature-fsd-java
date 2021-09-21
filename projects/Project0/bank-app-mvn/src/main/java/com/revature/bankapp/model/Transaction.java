@@ -83,50 +83,14 @@ public class Transaction {
 	public String print() {
 		return "Type: " + type + "  Amount: "+ amount;
 	}
-/*
-	public double withdraw(double withdrawAmount) {
-		while (success) {
-//			System.out.println("Enter amount: ");
-//			double withdrawAmount = sc.nextDouble();
-			if (withdrawAmount < 0) {
-				System.out.println("Enter Amount greater than 0");
-			} else if (withdrawAmount <= initialAmount) {
-				initialAmount -= withdrawAmount;
-				success = false;
-				try {
-					accdao.insert(new Transaction('D', withdrawAmount));
-					accdao.update(this);
-					System.out.println("Successfull");
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-			} else {
-				System.out.println("Insufficient funds");
-			}
 
-		}
-		return initialAmount;
+	@Override
+	public String toString() {
+		return "Transaction [accountId=" + accountId + ", type=" + type + ", amount=" + amount + "]";
 	}
-	*/
-/*
-	public double deposit(double depositAmount) {
-		while (success) {
-			if (depositAmount < 0) {
-				System.out.println("Enter Amount greater than 0");
-			} else {
-				initialAmount += depositAmount;
-				success = false;
-				try {
-					accdao.insert(new Transaction('C', depositAmount));
-					accdao.update(this);
-					System.out.println("Successfull");
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-			}
-		}
 
-		return initialAmount;
-	}
-	*/
+	
+
+	
+	
 }
