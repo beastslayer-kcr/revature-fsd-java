@@ -16,7 +16,7 @@ public class CustomerDaoImpl implements CustomerDao{
 	@Override
 	public void create(Customer customer) throws SQLException {
 		try (Connection connection = Util.getConnection()) {
-			String sql = "INSERT INTO customer ( FirstName , LastName, Email, password) VALUES (? ,?, ? ,?)";
+			String sql = "INSERT INTO customer ( FirstName , LastName, Email, Password) VALUES (? ,?, ? ,?)";
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setString(1, customer.getFirstName());
 			statement.setString(2, customer.getLastName());

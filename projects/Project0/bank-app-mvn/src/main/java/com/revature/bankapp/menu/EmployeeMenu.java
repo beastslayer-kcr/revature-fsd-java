@@ -70,6 +70,7 @@ public class EmployeeMenu extends Menu{
 				e.printStackTrace();
 			}
 			displayMenuAndCaptureSelection();
+			break;
 		case 5:
 			MainMenu mainmenu = new MainMenu("Main Menu");
 			mainmenu.displayMenu();

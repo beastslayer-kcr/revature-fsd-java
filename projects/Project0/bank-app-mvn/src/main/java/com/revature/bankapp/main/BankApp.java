@@ -9,7 +9,7 @@ import com.revature.bankapp.model.Customer;
 public class BankApp {
 	 private static Scanner scanner = new Scanner(System.in); 
 	 private static Customer currentCustomer;
-	public static void main(String[] args) {
+	 public static void main(String[] args) {
 		MainMenu menu = new MainMenu("Main Menu");
 		menu.displayMenuAndCaptureSelection();
 
@@ -25,5 +25,4 @@ public class BankApp {
 		BankApp.currentCustomer = currentCustomer;
 	}
 	 
-	
 }

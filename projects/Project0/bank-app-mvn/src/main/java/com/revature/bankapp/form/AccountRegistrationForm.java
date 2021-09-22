@@ -46,10 +46,10 @@ public class AccountRegistrationForm extends Form {
 	@Override
 	public void action() {
 
-		AccountDaoImpl customerDaoImpl = new AccountDaoImpl();
+		AccountDaoImpl accountDaoImpl = new AccountDaoImpl();
 
 		try {
-			customerDaoImpl.create(new Account(balance, branch, first_name, last_name, email));
+			accountDaoImpl.create(new Account(balance, branch, first_name, last_name, email));
 		} catch (SQLException e) {
 
 			e.printStackTrace();
